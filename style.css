@@ -1,0 +1,36 @@
+body {
+  box-sizing: content-box;
+}
+
+section {
+  border-bottom: 2px dashed darkgoldenrod;
+  padding-bottom: 0.6785rem;
+}
+form {
+  width: 30%;
+  position: relative;
+}
+
+fieldset > * {
+  display: block;
+  margin-bottom: 0.8rem;
+  position: relative;
+}
+
+button[type="submit"] {
+  padding: 1rem;
+  margin-left: auto;
+  margin-bottom: 0;
+}
+
+.introduction {
+  background: rgba(234, 224, 255, 0.7);
+}
+
+.forms {
+  background: rgba(255, 224, 234, 0.7);
+}
+
+.lists {
+  background: rgba(224, 255, 234, 0.7);
+}

@@ -1,36 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Introduction to HTML and CSS in a course that also stresses creativity"
+    />
+    <meta charset="utf-8" />
+    <!-- For crawlers and SEOs -->
+    <meta name="robots" content="index,follow" />
+    <link rel="shortcut icon" href="data.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Dev Ed HTML and CSS creative course</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Introduction to HTML and CSS in a course that also stresses creativity">
-  <meta charset="utf-8">
-  <!-- For crawlers and SEOs -->
-  <meta name="robots" content="index,follow">
-  <link rel="shortcut icon" href="data.svg" type="image/x-icon">
-  <title>Dev Ed HTML and CSS creative course</title>
-</head>
-
-<body>
-  <h1>This is a header</h1>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet vitae quidem, sint reiciendis, quam molestias
-    accusantium, cumque velit maxime corrupti praesentium porro dolor esse ipsum illum sit itaque eum doloribus quisquam
-    placeat voluptas quod? Magnam quia rem obcaecati officiis suscipit veritatis ad est voluptates iure, repellat porro
-    laudantium in sint unde provident. Quae corporis eos ipsum veritatis corrupti, iure officia minima? Non cumque
-    aspernatur distinctio atque, quod quia dolores fuga architecto. Quas, iste aliquam odit dolorem sit exercitationem
-    animi in itaque, a quidem pariatur harum non numquam voluptate qui architecto facere at, quis id aut ex officiis
-    vero! Aliquam et quae hic alias! Consectetur quis nisi accusantium tempora earum, autem et fuga dolor cumque quod
-    explicabo officia sint aut natus eius in, eos, corrupti quasi corporis nobis recusandae ullam nesciunt aliquid
-    repellendus. Iure nemo inventore dolorum! Assumenda cum optio ducimus quos nesciunt veniam dolorum dolorem a esse
-    fugiat. Iste, dolore cupiditate. Praesentium ipsum accusamus perferendis voluptates ex! Non, aspernatur. Nihil,
-    fugiat! Rerum consectetur non ratione, aspernatur consequatur error atque! A porro reprehenderit asperiores neque
-    quas eligendi accusamus iusto, excepturi explicabo architecto praesentium ratione sapiente aliquam doloremque
-    assumenda tempore voluptates! Earum quod vero et totam ex aliquam impedit dignissimos asperiores facilis!</p>
-  <h2 style="border-bottom: 1px dotted dodgerblue">
-    This is a second header, not as bit as an h1, but still relevant.
-  </h2>
-  <p>And <i>this</i> is <mark>the explanation</mark> <del>related</del> to that h2</p>
-</body>
-
+  <body>
+    <section class="introduction">
+      <h1>This is a header</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet vitae
+        quidem, sint reiciendis, quam molestias accusantium, cumque velit maxime
+        corrupti praesentium porro dolor esse ipsum illum sit itaque eum
+        doloribus quisquam placeat voluptas quod? Magnam quia rem obcaecati
+        officiis suscipit veritatis ad est voluptates iure, repellat porro
+        laudantium in sint unde provident. Quae corporis eos ipsum veritatis
+        corrupti, iure officia minima? Non cumque aspernatur distinctio atque,
+        quod quia dolores fuga architecto. Quas, iste aliquam odit dolorem sit
+        exercitationem animi in itaque, a quidem pariatur harum non numquam
+        voluptate qui architecto facere at, quis id aut ex officiis vero!
+        Aliquam et quae hic alias! Consectetur quis nisi accusantium tempora
+        earum, autem et fuga dolor cumque quod explicabo officia sint aut natus
+        eius in, eos, corrupti quasi corporis nobis recusandae ullam nesciunt
+        aliquid repellendus. Iure nemo inventore dolorum! Assumenda cum optio
+        ducimus quos nesciunt veniam dolorum dolorem a esse fugiat. Iste, dolore
+        cupiditate. Praesentium ipsum accusamus perferendis voluptates ex! Non,
+        aspernatur. Nihil, fugiat! Rerum consectetur non ratione, aspernatur
+        consequatur error atque! A porro reprehenderit asperiores neque quas
+        eligendi accusamus iusto, excepturi explicabo architecto praesentium
+        ratione sapiente aliquam doloremque assumenda tempore voluptates! Earum
+        quod vero et totam ex aliquam impedit dignissimos asperiores facilis!
+      </p>
+      <h2 style="border-bottom: 1px dotted dodgerblue;">
+        This is a second header, not as bit as an h1, but still relevant.
+      </h2>
+      <p>
+        And <i>this</i> is <mark>the explanation</mark> <del>related</del> to
+        that h2
+      </p>
+    </section>
+    <section class="forms">
+      <h3>
+        When submitting forms, only the fields with a "name" attribute will be
+        submitted
+      </h3>
+      <form class="form" action="index.html" method="post">
+        <fieldset>
+          <!-- fieldset draws a box around the inside elements -->
+          <legend>Sign up</legend>
+          <!-- legend adds a text on the box drawn by the fieldset-->
+          <label for="user">Username</label>
+          <input
+            type="text"
+            minlength="6"
+            maxlength="60"
+            id="user"
+            name="user"
+            required
+          />
+          <label for="email" name="email">Email</label>
+          <input type="email" id="email" required />
+          <select name="products" id="products">
+            <option value="1">Macbook 2011</option>
+            <option value="2">Macbook 2012</option>
+            <option value="3">Macbook 2013</option>
+            <option value="4">Macbook 2014</option>
+            <option value="5">Macbook 2015</option>
+          </select>
+          <label for="message">Message</label>
+          <textarea name="message" id="message" rows="10" cols="80"></textarea>
+          <button type="submit">Submit</button>
+        </fieldset>
+      </form>
+      <form class="radio" method="GET">
+        <fieldset>
+          <legend>Radio buttons</legend>
+          <input type="radio" name="product" value="MacBookPro-16" />
+          <input type="radio" name="product" value="iPhone-11-Pro" />
+          <input type="radio" name="product" value="BananaPhone" />
+          <button type="submit">Submit</button>
+        </fieldset>
+      </form>
+    </section>
+    <section class="lists">
+      <h1>Lists</h1>
+      <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+        <li>item 5</li>
+      </ul>
+    </section>
+  </body>
 </html>
